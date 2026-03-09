@@ -22,11 +22,11 @@ class Solution {
 
         long ans = 0;
 
-        if (last == 0) { // last placed was 0
+        if (last == 0) { 
             for (int i = 1; i <= limit && i <= o; i++) {
                 ans = (ans + solve(z, o - i, 1, limit)) % MOD;
             }
-        } else { // last placed was 1
+        } else { 
             for (int i = 1; i <= limit && i <= z; i++) {
                 ans = (ans + solve(z - i, o, 0, limit)) % MOD;
             }
